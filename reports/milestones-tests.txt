@@ -1,0 +1,530 @@
+
+> test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: daily two-action limit resets next day; weekly costs charged only on seventh day
+ok 1 - daily two-action limit resets next day; weekly costs charged only on seventh day
+  ---
+  duration_ms: 19.985959
+  type: 'test'
+  ...
+# Subtest: missed appointments penalize once and fulfilled ones consume one daily action
+ok 2 - missed appointments penalize once and fulfilled ones consume one daily action
+  ---
+  duration_ms: 1.169083
+  type: 'test'
+  ...
+# Subtest: project deadlines appear automatically, lose reputation once, and eventually refund
+ok 3 - project deadlines appear automatically, lose reputation once, and eventually refund
+  ---
+  duration_ms: 0.614375
+  type: 'test'
+  ...
+# Subtest: migration keeps old funds and work while assigning a valid daily slot
+ok 4 - migration keeps old funds and work while assigning a valid daily slot
+  ---
+  duration_ms: 3.583709
+  type: 'test'
+  ...
+# Subtest: requires three distinct choices and preserves only approved fields
+ok 5 - requires three distinct choices and preserves only approved fields
+  ---
+  duration_ms: 2.000375
+  type: 'test'
+  ...
+# Subtest: each input surface has a fixed schema and date choices cannot be in the past
+ok 6 - each input surface has a fixed schema and date choices cannot be in the past
+  ---
+  duration_ms: 0.942209
+  type: 'test'
+  ...
+# Subtest: choices come from provider with non-thinking JSON output and scene context
+ok 7 - choices come from provider with non-thinking JSON output and scene context
+  ---
+  duration_ms: 1.6055
+  type: 'test'
+  ...
+# Subtest: explicit demo promises create a presales task before signing, historical migration is idempotent
+ok 8 - explicit demo promises create a presales task before signing, historical migration is idempotent
+  ---
+  duration_ms: 16.478708
+  type: 'test'
+  ...
+# Subtest: customer requests, negative messages and shared existing work do not create commitments
+ok 9 - customer requests, negative messages and shared existing work do not create commitments
+  ---
+  duration_ms: 0.373459
+  type: 'test'
+  ...
+# Subtest: client demo charges once, saves linked artifact, and never resets own product
+ok 10 - client demo charges once, saves linked artifact, and never resets own product
+  ---
+  duration_ms: 0.439792
+  type: 'test'
+  ...
+# Subtest: invalid generation leaves task, time and balance unchanged
+ok 11 - invalid generation leaves task, time and balance unchanged
+  ---
+  duration_ms: 0.173709
+  type: 'test'
+  ...
+# Subtest: four roles have distinct strengths and equal skill point totals
+ok 12 - four roles have distinct strengths and equal skill point totals
+  ---
+  duration_ms: 18.010042
+  type: 'test'
+  ...
+# Subtest: each skill changes its real output without unrelated bonuses
+ok 13 - each skill changes its real output without unrelated bonuses
+  ---
+  duration_ms: 0.55275
+  type: 'test'
+  ...
+# Subtest: contract pays deposit once, remainder on delivery, week report includes both
+ok 14 - contract pays deposit once, remainder on delivery, week report includes both
+  ---
+  duration_ms: 0.898958
+  type: 'test'
+  ...
+# Subtest: time limits, invalid training, and capped ability growth
+ok 15 - time limits, invalid training, and capped ability growth
+  ---
+  duration_ms: 0.260083
+  type: 'test'
+  ...
+# Subtest: work develops only relevant skills and practice without projects does not improve delivery
+ok 16 - work develops only relevant skills and practice without projects does not improve delivery
+  ---
+  duration_ms: 0.243792
+  type: 'test'
+  ...
+# Subtest: discovery affects daily sales and a valid plan is required
+ok 17 - discovery affects daily sales and a valid plan is required
+  ---
+  duration_ms: 3.494667
+  type: 'test'
+  ...
+# Subtest: overdue projects refund exactly the original deposit
+ok 18 - overdue projects refund exactly the original deposit
+  ---
+  duration_ms: 0.935125
+  type: 'test'
+  ...
+# Subtest: fatigue and tools affect delivery; existing quotes stay fixed after training
+ok 19 - fatigue and tools affect delivery; existing quotes stay fixed after training
+  ---
+  duration_ms: 0.40975
+  type: 'test'
+  ...
+# Subtest: events and endings block further settlement
+ok 20 - events and endings block further settlement
+  ---
+  duration_ms: 1.816625
+  type: 'test'
+  ...
+# Subtest: all four roles can complete a year with product strategy and correct accounting
+ok 21 - all four roles can complete a year with product strategy and correct accounting
+  ---
+  duration_ms: 44.905375
+  type: 'test'
+  ...
+# Subtest: gender does not change abilities or economy
+ok 22 - gender does not change abilities or economy
+  ---
+  duration_ms: 0.405708
+  type: 'test'
+  ...
+# Subtest: v1 saves migrate roles and add capabilities without losing funds or contracts
+ok 23 - v1 saves migrate roles and add capabilities without losing funds or contracts
+  ---
+  duration_ms: 0.292709
+  type: 'test'
+  ...
+# Subtest: new careers start with distinct known contacts without signed work or time costs
+ok 24 - new careers start with distinct known contacts without signed work or time costs
+  ---
+  duration_ms: 0.351375
+  type: 'test'
+  ...
+# Subtest: outreach consumes limited pool while marketing acquires inbound leads independently
+ok 25 - outreach consumes limited pool while marketing acquires inbound leads independently
+  ---
+  duration_ms: 0.072542
+  type: 'test'
+  ...
+# Subtest: signing requires successful conversation; low score cannot unlock contract; result is saved
+ok 26 - signing requires successful conversation; low score cannot unlock contract; result is saved
+  ---
+  duration_ms: 0.348417
+  type: 'test'
+  ...
+# Subtest: immediate actions spend time once and weekly settlement never duplicates their outcomes
+ok 27 - immediate actions spend time once and weekly settlement never duplicates their outcomes
+  ---
+  duration_ms: 0.114292
+  type: 'test'
+  ...
+# Subtest: delivery branch targets selected project and training branch targets selected ability
+ok 28 - delivery branch targets selected project and training branch targets selected ability
+  ---
+  duration_ms: 0.100458
+  type: 'test'
+  ...
+# Subtest: cannot execute a third daily action; expired leads are removed and budget persists across reload
+ok 29 - cannot execute a third daily action; expired leads are removed and budget persists across reload
+  ---
+  duration_ms: 0.140417
+  type: 'test'
+  ...
+# Subtest: feedback is inside the active dialog top layer, and returns to body outside a dialog
+ok 30 - feedback is inside the active dialog top layer, and returns to body outside a dialog
+  ---
+  duration_ms: 1.28825
+  type: 'test'
+  ...
+# Subtest: publishing uses one slot; a blocked publish preserves state and works next day
+ok 31 - publishing uses one slot; a blocked publish preserves state and works next day
+  ---
+  duration_ms: 13.97425
+  type: 'test'
+  ...
+# {"career":"development","day":47,"salary":12000,"recurring":25074,"cash":46666,"reach":1592}
+# {"career":"product","day":44,"salary":12000,"recurring":24079,"cash":46674,"reach":1616}
+# {"career":"operations","day":39,"salary":9000,"recurring":23681,"cash":38331,"reach":1776}
+# {"career":"sales","day":43,"salary":10000,"recurring":20895,"cash":42292,"reach":1480}
+# {"salary":3000,"winDay":42}
+# {"salary":50000,"winDay":84}
+# Subtest: first milestone needs both signing payment and final delivery, never a demo or deposit alone
+ok 32 - first milestone needs both signing payment and final delivery, never a demo or deposit alone
+  ---
+  duration_ms: 18.038959
+  type: 'test'
+  ...
+# Subtest: salary range and persistent identity; invalid v6 progression is rejected
+ok 33 - salary range and persistent identity; invalid v6 progression is rejected
+  ---
+  duration_ms: 2.549958
+  type: 'test'
+  ...
+# Subtest: monthly income resets after 28 days, excludes capital and expenses, subtracts refunds
+ok 34 - monthly income resets after 28 days, excludes capital and expenses, subtracts refunds
+  ---
+  duration_ms: 0.410958
+  type: 'test'
+  ...
+# Subtest: stage two accepts a later calendar month, not lifetime cumulative receipts
+ok 35 - stage two accepts a later calendar month, not lifetime cumulative receipts
+  ---
+  duration_ms: 2.063208
+  type: 'test'
+  ...
+# Subtest: daily sales are automatic, begin day after launch, and week boundary or reload never double pay
+ok 36 - daily sales are automatic, begin day after launch, and week boundary or reload never double pay
+  ---
+  duration_ms: 0.932083
+  type: 'test'
+  ...
+# Subtest: MVP requires seven consecutive paid days; zero sales breaks streak; project cash cannot replace product cash
+ok 37 - MVP requires seven consecutive paid days; zero sales breaks streak; project cash cannot replace product cash
+  ---
+  duration_ms: 0.405583
+  type: 'test'
+  ...
+# Subtest: stage four uses strict greater-than; stage five accepts exact double; all require 28 daily receipts
+ok 38 - stage four uses strict greater-than; stage five accepts exact double; all require 28 daily receipts
+  ---
+  duration_ms: 0.208584
+  type: 'test'
+  ...
+# Subtest: one huge sale cannot substitute for sustained income; lower price cannot create infinite revenue
+ok 39 - one huge sale cannot substitute for sustained income; lower price cannot create infinite revenue
+  ---
+  duration_ms: 0.075125
+  type: 'test'
+  ...
+# Subtest: unapproved or unfinished products earn nothing; weak conversion cannot be repaired by research alone
+ok 40 - unapproved or unfinished products earn nothing; weak conversion cannot be repaired by research alone
+  ---
+  duration_ms: 1.012667
+  type: 'test'
+  ...
+# Subtest: changing product resets streak and rolling product revenue, preserves earned medals and cash
+ok 41 - changing product resets streak and rolling product revenue, preserves earned medals and cash
+  ---
+  duration_ms: 1.02925
+  type: 'test'
+  ...
+# Subtest: legacy migration preserves state and counts provable payments, without fabricating daily revenue
+ok 42 - legacy migration preserves state and counts provable payments, without fabricating daily revenue
+  ---
+  duration_ms: 0.890667
+  type: 'test'
+  ...
+# Subtest: bankruptcy overrides victory eligibility and a year without the milestones is not victory
+ok 43 - bankruptcy overrides victory eligibility and a year without the milestones is not victory
+  ---
+  duration_ms: 0.762125
+  type: 'test'
+  ...
+# Subtest: development can win through contract delivery, demo, research and content within one year
+ok 44 - development can win through contract delivery, demo, research and content within one year
+  ---
+  duration_ms: 2.872625
+  type: 'test'
+  ...
+# Subtest: product can win through contract delivery, demo, research and content within one year
+ok 45 - product can win through contract delivery, demo, research and content within one year
+  ---
+  duration_ms: 1.887167
+  type: 'test'
+  ...
+# Subtest: operations can win through contract delivery, demo, research and content within one year
+ok 46 - operations can win through contract delivery, demo, research and content within one year
+  ---
+  duration_ms: 1.416667
+  type: 'test'
+  ...
+# Subtest: sales can win through contract delivery, demo, research and content within one year
+ok 47 - sales can win through contract delivery, demo, research and content within one year
+  ---
+  duration_ms: 0.916958
+  type: 'test'
+  ...
+# Subtest: already launched product earns for 28 days without communication or any work action
+ok 48 - already launched product earns for 28 days without communication or any work action
+  ---
+  duration_ms: 0.701666
+  type: 'test'
+  ...
+# Subtest: salary extremes remain achievable and low quality cannot unlock passive-income victory
+ok 49 - salary extremes remain achievable and low quality cannot unlock passive-income victory
+  ---
+  duration_ms: 3.824459
+  type: 'test'
+  ...
+# Subtest: old active contracts can finish first milestone after migration if deposit evidence exists
+ok 50 - old active contracts can finish first milestone after migration if deposit evidence exists
+  ---
+  duration_ms: 0.457292
+  type: 'test'
+  ...
+# Subtest: partial legacy records never invent a full paid order or daily sales; progression survives ledger trimming
+ok 51 - partial legacy records never invent a full paid order or daily sales; progression survives ledger trimming
+  ---
+  duration_ms: 0.726958
+  type: 'test'
+  ...
+# Subtest: missing a paid day blocks stages four and five even with enough total revenue
+ok 52 - missing a paid day blocks stages four and five even with enough total revenue
+  ---
+  duration_ms: 0.446208
+  type: 'test'
+  ...
+# Subtest: profitable product alone cannot skip the first fully delivered customer order
+ok 53 - profitable product alone cannot skip the first fully delivered customer order
+  ---
+  duration_ms: 0.88925
+  type: 'test'
+  ...
+# Subtest: final-day achievement date remains inside the 364-day challenge
+ok 54 - final-day achievement date remains inside the 364-day challenge
+  ---
+  duration_ms: 0.452458
+  type: 'test'
+  ...
+# Subtest: income excludes startup cash, profit can be negative, equal scores share ranks
+ok 55 - income excludes startup cash, profit can be negative, equal scores share ranks
+  ---
+  duration_ms: 18.890125
+  type: 'test'
+  ...
+# Subtest: customer ranking deduplicates active and delivered clients and excludes demos/leads
+ok 56 - customer ranking deduplicates active and delivered clients and excludes demos/leads
+  ---
+  duration_ms: 0.250916
+  type: 'test'
+  ...
+# Subtest: missing users are omitted and corrupt saves are reported without writes
+ok 57 - missing users are omitted and corrupt saves are reported without writes
+  ---
+  duration_ms: 0.225417
+  type: 'test'
+  ...
+# Subtest: config API never returns secret; file mode private; blank preserves key and explicit clear removes
+ok 58 - config API never returns secret; file mode private; blank preserves key and explicit clear removes
+  ---
+  duration_ms: 3.617
+  type: 'test'
+  ...
+# Subtest: missing key fails without attempting network
+ok 59 - missing key fails without attempting network
+  ---
+  duration_ms: 0.274833
+  type: 'test'
+  ...
+# Subtest: customer results are schema validated and low score never converts
+ok 60 - customer results are schema validated and low score never converts
+  ---
+  duration_ms: 0.230208
+  type: 'test'
+  ...
+# Subtest: untrusted chat roles, oversized messages and invalid skills are rejected
+ok 61 - untrusted chat roles, oversized messages and invalid skills are rejected
+  ---
+  duration_ms: 1.561459
+  type: 'test'
+  ...
+# Subtest: mock provider request uses fixed endpoint and JSON mode; returned outcome is parsed
+ok 62 - mock provider request uses fixed endpoint and JSON mode; returned outcome is parsed
+  ---
+  duration_ms: 0.778583
+  type: 'test'
+  ...
+# Subtest: provider failures and truncated responses return safe errors without raw secret body
+ok 63 - provider failures and truncated responses return safe errors without raw secret body
+  ---
+  duration_ms: 0.208542
+  type: 'test'
+  ...
+# Subtest: backend gates deals by decision authority, fit, and evolving familiarity
+ok 64 - backend gates deals by decision authority, fit, and evolving familiarity
+  ---
+  duration_ms: 0.325
+  type: 'test'
+  ...
+# Subtest: article quality changes reach, inquiries and reputation for the same founder
+ok 65 - article quality changes reach, inquiries and reputation for the same founder
+  ---
+  duration_ms: 20.12825
+  type: 'test'
+  ...
+# Subtest: invalid article ratings cause no game changes
+ok 66 - invalid article ratings cause no game changes
+  ---
+  duration_ms: 1.421083
+  type: 'test'
+  ...
+# Subtest: marketing independently evaluates actual content and rejects invalid provider responses
+ok 67 - marketing independently evaluates actual content and rejects invalid provider responses
+  ---
+  duration_ms: 0.40725
+  type: 'test'
+  ...
+# Subtest: product proposal validates fields and price; model controls scores but server controls eligibility
+ok 68 - product proposal validates fields and price; model controls scores but server controls eligibility
+  ---
+  duration_ms: 1.213916
+  type: 'test'
+  ...
+# Subtest: confirmed plans use selected price, cannot monetize low scores even after research, and reset on revision
+ok 69 - confirmed plans use selected price, cannot monetize low scores even after research, and reset on revision
+  ---
+  duration_ms: 11.000209
+  type: 'test'
+  ...
+# Subtest: model outage and missing config do not provide fabricated product evaluation
+ok 70 - model outage and missing config do not provide fabricated product evaluation
+  ---
+  duration_ms: 0.522375
+  type: 'test'
+  ...
+# Subtest: demo development generates interactive HTML and charges exactly one work block plus game cost
+ok 71 - demo development generates interactive HTML and charges exactly one work block plus game cost
+  ---
+  duration_ms: 2.956333
+  type: 'test'
+  ...
+# Subtest: incomplete generated HTML is rejected before charging resources
+ok 72 - incomplete generated HTML is rejected before charging resources
+  ---
+  duration_ms: 0.428083
+  type: 'test'
+  ...
+# Subtest: truncated evaluation and demo each retry once without thinking or losing the plan
+ok 73 - truncated evaluation and demo each retry once without thinking or losing the plan
+  ---
+  duration_ms: 0.31275
+  type: 'test'
+  ...
+# Subtest: truncation retries are bounded and authentication failures are not retried
+ok 74 - truncation retries are bounded and authentication failures are not retried
+  ---
+  duration_ms: 0.292792
+  type: 'test'
+  ...
+# Subtest: library preserves demo versions and migrates existing demo without duplicates
+ok 75 - library preserves demo versions and migrates existing demo without duplicates
+  ---
+  duration_ms: 0.695083
+  type: 'test'
+  ...
+# Subtest: delivered client projects remain in library with accurate status
+ok 76 - delivered client projects remain in library with accurate status
+  ---
+  duration_ms: 0.490625
+  type: 'test'
+  ...
+# Subtest: every career acquaintance resolves to matching customer profile and valid chat context
+ok 77 - every career acquaintance resolves to matching customer profile and valid chat context
+  ---
+  duration_ms: 12.256625
+  type: 'test'
+  ...
+# Subtest: existing saved contact lists are not reseeded on load
+ok 78 - existing saved contact lists are not reseeded on load
+  ---
+  duration_ms: 1.872042
+  type: 'test'
+  ...
+# Subtest: legacy migration copies progress and mode once and keeps source
+ok 79 - legacy migration copies progress and mode once and keeps source
+  ---
+  duration_ms: 0.436625
+  type: 'test'
+  ...
+# Subtest: user switching isolates company and mode, renaming preserves identity
+ok 80 - user switching isolates company and mode, renaming preserves identity
+  ---
+  duration_ms: 1.150792
+  type: 'test'
+  ...
+# Subtest: invalid or duplicate names and unknown switches do not mutate registry
+ok 81 - invalid or duplicate names and unknown switches do not mutate registry
+  ---
+  duration_ms: 0.128917
+  type: 'test'
+  ...
+# Subtest: migration storage failure never destroys original save or publishes partial registry
+ok 82 - migration storage failure never destroys original save or publishes partial registry
+  ---
+  duration_ms: 0.063209
+  type: 'test'
+  ...
+# Subtest: fresh profiles require a name while legacy saves remain usable
+ok 83 - fresh profiles require a name while legacy saves remain usable
+  ---
+  duration_ms: 0.063125
+  type: 'test'
+  ...
+# Subtest: missing and whitespace names cannot create or rename a profile
+ok 84 - missing and whitespace names cannot create or rename a profile
+  ---
+  duration_ms: 0.121667
+  type: 'test'
+  ...
+# Subtest: suggested Chinese names are unique and exclude previous suggestions
+ok 85 - suggested Chinese names are unique and exclude previous suggestions
+  ---
+  duration_ms: 0.707542
+  type: 'test'
+  ...
+1..85
+# tests 85
+# suites 0
+# pass 85
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 157.794875

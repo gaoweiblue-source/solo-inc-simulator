@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import {fileURLToPath} from 'node:url';
+const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const read=name=>fs.readFileSync(path.join(project,'dist',name),'utf8');
+let css=read('style.css').replace(/^@import[^;]+;\s*/gm,'');
+const art='data:image/png;base64,'+fs.readFileSync(path.join(project,'dist/studio.png')).toString('base64');
+css=css.replaceAll("url('founders.png')","url('data:image/png;base64,"+fs.readFileSync(path.join(project,'dist/founders.png')).toString('base64')+"')");
+css=css.replaceAll("url('workstation-realistic.png')","url('data:image/png;base64,"+fs.readFileSync(path.join(project,'dist/workstation-realistic.png')).toString('base64')+"')");
+css=css.replaceAll("url('workstation-female.png')","url('data:image/png;base64,"+fs.readFileSync(path.join(project,'dist/workstation-female.png')).toString('base64')+"')");
+const engine=read('progression.js').replace(/^export /gm,'')+'\n'+read('users.js').replace(/^export /gm,'')+'\n'+read('contacts.js').replace(/^export /gm,'')+'\n'+read('engine.js').replace(/^import .*?;\s*/gm,'').replace(/^export /gm,'');
+const ranking=read('leaderboard.js').replace(/^import .*?;\s*/gm,'').replace(/^export /gm,'');
+let app=ranking+'\n'+read('app.js').replace(/^import .*?;\s*/gm,'').replaceAll('src="studio.png"','src="'+art+'"');
+for(const role of ['development','product','operations','sales']){const name='career-'+role+'.png';app=app.replaceAll(name,'data:image/png;base64,'+fs.readFileSync(path.join(project,'dist',name)).toString('base64'));}
+const js='(()=>{\n"use strict";\n'+engine+'\n'+app+'\n})();';
+new vm.Script(js,{filename:'local-game.js'});
+let html=read('index.html').replace('<link rel="stylesheet" href="style.css">',()=>'<style>'+css+'</style>').replace('<script type="module" src="app.js"></script>',()=>'<script>'+js.replace(/<\/script/gi,'<\\/script')+'</script>');
+html=html.replace('<meta charset="UTF-8">','<meta charset="UTF-8"><meta http-equiv="Content-Security-Policy" content="default-src \'none\'; script-src \'unsafe-inline\'; style-src \'unsafe-inline\'; img-src data:; font-src data:; connect-src \'none\'; base-uri \'none\'; form-action \'none\'">');
+if(/@import|<script[^>]+src=|<link[^>]+rel="stylesheet"|career-(development|product|operations|sales)\.png|src="studio.png"|url\([\'\"]?founders\.png/.test(html))throw Error('External asset remains');
+const output=path.join(project,'..','一人公司模拟器.html');
+fs.writeFileSync(output,html);
+console.log(JSON.stringify({output,bytes:Buffer.byteLength(html),scriptSyntax:'passed',externalAssets:0}));
